@@ -19,6 +19,12 @@
 				e.preventDefault();
 				const formdata = {};
 				const elements = this.el.elements;
+``
+                Array.from(elements).forEach(
+                	function(element) {
+                        formdata[element.name] = element.value;
+                	}
+				);
 				for (let name in elements) {
 					formdata[name] = elements[name].value;
 				}
